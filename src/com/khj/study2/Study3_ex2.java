@@ -7,17 +7,18 @@ public class Study3_ex2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		//회원가입시 입력한 데이터
-		int id=1234;
-		int pw=5678;
+		//id=1234, 비번=5678
+		int id=0;
+		int pw=0;
 		int goyong = 0;
 		double pay=0;
 		//로그인 과정
 		//id와 pw를 입력받아서 로그인 처리
 		//로그인 성공,실패 메시지
-		System.out.println("아이디 입력");
+		System.out.println("아이디를 입력하세요");
 		id = sc.nextInt();
 		if (id==1234) {
-			System.out.println("비밀번호 입력");
+			System.out.println("비밀번호를 입력하세요");
 			pw=sc.nextInt();
 			if (pw==5678) {
 				System.out.println("로그인 성공");
@@ -42,10 +43,7 @@ public class Study3_ex2 {
 			System.out.println("로그인 실패: 아이디가 틀림");
 		}
 		
-		
-		
-		
-		
+		sc.close();
 		}
 		
 }	
