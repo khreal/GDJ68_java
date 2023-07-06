@@ -19,13 +19,13 @@ public class StudentService {
 		student.math = sc.nextInt();
 		student.total=student.kor+student.eng+student.math;
 		student.avg=student.total/3.0;
-		
 		return student;
 		
 		
 		//학생1명 만들어서 이름, 번호, 국어, 영어, 수학
 		//총점 평균을 계산
 		//학생을 리턴
+		
 	}
 	
 	
@@ -62,7 +62,8 @@ public class StudentService {
 			students[i]=student;
 		}
 		return students;
+		
 	}
-//		
+	
 //	}
 }
