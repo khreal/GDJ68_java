@@ -13,19 +13,19 @@ public class StudentController {
 		Student[] students=null;
 		
 		while(true){
-			System.out.println("1. 학생정보 생성, 2.학생정보 출력, 3.프로그램 종료");
+			System.out.println("1. 학생정보 생성, 2.학생정보 출력, 3.학생정보 검색 4.프로그램 종료");
 			int select = sc.nextInt();
 			if(select==1) {
 				students = studentService.makeStudents();
 			}else if(select==2) {
 				studentView.view(students);
 			}else if(select==3) {
-				System.out.println("종료");
-				break;
+				Student student = studentService.findByNum(students);
+				studentView.view(student);				
 			}else {
-				System.out.println("잘못누름");
+				System.out.println("프로그램 종료");
+				break;
 			}
 		}
 	}
-
 }

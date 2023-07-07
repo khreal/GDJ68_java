@@ -3,22 +3,46 @@ package com.khj.study4.s2;
 import java.util.Scanner;
 
 public class StudentService {
+	
+	public Student findByNum(Student[] students) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("찾으려는 학생의 번호");
+		int selectNum = sc.nextInt();
+		
+		Student student=null;
+		
+		for(int i=0;i<students.length;i++) {
+			if(selectNum==students[i].getNum()) {
+				student = students[i];
+				break;
+			}
+		}
+		
+		return student; 		
+		
+			
+	}
+		
+		
+	
+	
 	public Student makeStudentOne() {
 		Scanner sc = new Scanner(System.in);
 
 		Student student = new Student();
 		System.out.println("이름");
-		student.name = sc.next();
+		student.setName(sc.next());
 		System.out.println("번호");
-		student.num = sc.nextInt();
+		student.setNum(sc.nextInt());
 		System.out.println("국어");
-		student.kor = sc.nextInt();
+		student.setKor(sc.nextInt());
 		System.out.println("영어");
-		student.eng = sc.nextInt();
+		student.setEng(sc.nextInt());
 		System.out.println("수학");
-		student.math = sc.nextInt();
-		student.total=student.kor+student.eng+student.math;
-		student.avg=student.total/3.0;
+		student.setMath(sc.nextInt());
+//		student.getTotal()=student.setKor+student.setEng+student.setMath;
+//		student.getAvg()=student.setTotal/3.0;
+//	
 		return student;
 		
 		
@@ -48,22 +72,18 @@ public class StudentService {
 		for(int i=0;i<count;i++) {
 			Student student = new Student();
 			System.out.println("이름");
-			student.name = sc.next();
+			student.setName(sc.next());
 			System.out.println("번호");
-			student.num = sc.nextInt();
+			student.setNum(sc.nextInt());
 			System.out.println("국어");
-			student.kor = sc.nextInt();
+			student.setKor(sc.nextInt());
 			System.out.println("영어");
-			student.eng = sc.nextInt();
+			student.setEng(sc.nextInt());
 			System.out.println("수학");
-			student.math = sc.nextInt();
-			student.total=student.kor+student.eng+student.math;
-			student.avg=student.total/3.0;
+			student.setMath(sc.nextInt());
+			student.cal();
 			students[i]=student;
-		}
+		}		
 		return students;
-		
-	}
-	
-//	}
+	}	
 }
